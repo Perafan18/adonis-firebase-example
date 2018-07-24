@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Hola</title>
+        {{ style('css/materialize.min.css') }}
+        @!section('styles')
+    </head>
+    <body>
+        <nav>
+              <div class="nav-wrapper blue darken-4">
+                <a href="#" class="brand-logo">Adonis Firebase</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{ route('login') }}">Login</a></li>
+                    <li><a href="{{ route('register') }}">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            @!section('view')
+        </div>
+    </body>
+    {{ script('js/jquery.min') }}
+    {{ script('js/materialize.min') }}
+    {{ script('js/firebase') }}
+    <script type="text/javascript">
+        var config = {
+            apiKey: "AIzaSyBTFNMU00xcsoam-DOOE9jWq3Kvc5L26Bg",
+            authDomain: "notifcaciones-416d4.firebaseapp.com",
+            databaseURL: "https://notifcaciones-416d4.firebaseio.com",
+            storageBucket: "notifcaciones-416d4.appspot.com"
+        }
+        var firebase = firebase.initializeApp(config)
+    </script>
+    @!section('javascript')
+</html>

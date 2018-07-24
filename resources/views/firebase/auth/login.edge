@@ -1,0 +1,27 @@
+@layout('firebase.auth.layouts.app')
+
+@section('view')
+<div class="row">
+    <form class="col s6">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="password-input" type="password" class="validate">
+                <label for="password-input">Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+              <input id="email-input" type="email" class="validate">
+              <label for="email-input">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <button id="login-button" type="button" class="btn waves-effect waves-light">Inciar sesión</button>
+        </div>
+    </form>
+</div>
+@endsection
+
+@section('javascript')
+    {{ script('js/login') }}
+@endsection

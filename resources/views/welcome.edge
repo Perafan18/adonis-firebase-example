@@ -3,13 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <title>Hello Adonis</title>
-  {{ style('style') }}
+  {{ css('style') }}
+
+  <style>
+    .navigation {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size:1.2em;
+    }
+
+    .navigation p {
+      color:#9f76da;
+    }
+  </style>
 </head>
 <body>
   <section>
     <div class="logo"></div>
     <div class="title"></div>
     <div class="subtitle"><p>AdonisJs simplicity will make you feel confident about your code</p></div>
+
+    <div class="navigation">
+      @loggedIn
+        <p>
+          Welcome back, {{ auth.user.username }}!
+          <a href="{{ route('logout') }}" style="text-decoration:none;color:white;">Logout</a>
+        </p>
+      @else
+        <a href="{{ route('login') }}" style="text-decoration:none;color:white;margin-right:20px;">Login</a>
+        <a href="{{ route('register') }}" style="text-decoration:none;color:white;">Register</a>
+      @endloggedIn
+    </div>
   </section>
 </body>
 </html>

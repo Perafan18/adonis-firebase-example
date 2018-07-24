@@ -1,4 +1,8 @@
 {
-    "/public/js/materialize.js": "/public/js/materialize.js",
-    "/public/css/materialize.css": "/public/css/materialize.css"
+    "/public/js/materialize.min.js": "/public/js/materialize.min.js",
+    "/public/js/login.js": "/public/js/login.js",
+    "/public/css/materialize.min.css": "/public/css/materialize.min.css",
+    "/public/js/jquery.min.js": "/public/js/jquery.min.js",
+    "/public/js/firebase-app.js": "/public/js/firebase-app.js",
+    "/public/js/firebase-auth.js": "/public/js/firebase-auth.js"
 }
